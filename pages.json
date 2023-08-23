@@ -1,0 +1,51 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/index/index-2",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}, {
+			"path": "pages/index/index-3",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/index/webview",
+			"style": {
+				"navigationBarTitleText": "webview测试"
+			}
+		},
+		{
+			"path": "pages/index/canvas-test",
+			"style": {
+				"navigationBarTitleText": "canvas-测试",
+				"navigationStyle": "custom",
+				"disableScroll": true
+			}
+
+		},
+		{
+			"path": "pages/interact-iframe/index",
+			"style": {
+				"navigationStyle": "custom",
+				"disableScroll": true
+				// "pageOrientation": "landscape"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

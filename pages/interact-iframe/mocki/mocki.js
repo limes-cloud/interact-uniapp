@@ -34,11 +34,11 @@ export default function getMock() {
 					type: "video",
 					resourceId: "resource_003",
 					timeline: [{
-						time: 3,
+						time: 1,
 						status: 'no-exec',
-						elements: ["element_001", "element_002", "element_003"],
+						elements: [],
 						lifeCycle: {
-							show: [],
+							show: ["action_005"],
 							hide: []
 						},
 					}],
@@ -125,6 +125,70 @@ export default function getMock() {
 				events: {
 					"click": ["action_003"],
 				}
+			}, {
+				id: "element_004",
+				type: "container",
+				show: false,
+				children: ["element_006", "element_005"],
+				style: {
+					zIndex: 2,
+					border: "1px solid red",
+					borderRadius: "4px",
+					whiteSpace: "nowarp",
+					padding: 20,
+					display: "flex",
+					color: "#fff",
+					height: "auto",
+					width: "100%",
+					top: 280,
+					left: 0,
+					flexDirection: "row",
+					justifyContent: "space-around",
+					overflowY: "scroll"
+				},
+				events: {
+					"click": ["action_003"],
+				}
+			}, {
+				id: "element_005",
+				in: "element_004",
+				type: "text",
+				show: false,
+				text: "he1111llo world\n你好\n你在干嘛\nhello world\n你好\n你在干嘛",
+				style: {
+					zIndex: 2,
+					border: "1px solid red",
+					borderRadius: "4px",
+					whiteSpace: "nowarp",
+					padding: 20,
+					color: "#fff",
+					height: 100,
+					width: 50,
+					overflowY: "scroll"
+				},
+				events: {
+					"click": ["action_003"],
+				}
+			}, {
+				id: "element_006",
+				in: "element_004",
+				type: "text",
+				show: false,
+				text: "he1111llo world\n你好\n你在干嘛\nhello world\n你好\n你在干嘛",
+				style: {
+					zIndex: 2,
+					border: "1px solid red",
+					borderRadius: "4px",
+					whiteSpace: "nowarp",
+					padding: 20,
+					color: "#fff",
+					height: 100,
+					width: 50,
+					overflowY: "scroll"
+				},
+				events: {
+					"click": ["action_003"],
+				}
 			}],
 			action: [{
 				id: "action_001",
@@ -141,6 +205,10 @@ export default function getMock() {
 				id: "action_004",
 				type: "hideElementByIds",
 				data: ["element_001"]
+			}, {
+				id: "action_005",
+				type: "showElementByIds",
+				data: ["element_004"]
 			}],
 			resource: [{
 				id: "resource_001",

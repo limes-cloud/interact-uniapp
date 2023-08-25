@@ -52,8 +52,6 @@ export default {
 				break;
 		}
 	},
-	// todo 
-
 	// 从指定时间播放
 	playSceneSeek(that, time) {
 		that.ctx.currentTime = time
@@ -67,13 +65,13 @@ export default {
 	},
 	// 播放当前场景
 	playScene() {
-		console.log("播放当前视频")
-		this.data.scene.play()
+		console.log("播放当前视频", this.data)
+		this.data.scene.playCurrentScene()
 	},
 	// 暂停播放当前场景
 	pauseScene() {
 		console.log("暂停当前视频")
-		this.data.scene.pause()
+		this.data.scene.pauseCurrentScene()
 	},
 	// 播放指定音乐
 	playAudioById(id) {
@@ -100,6 +98,9 @@ export default {
 		elem.show = true
 		if (elem.showAnimate && elem.showAnimate.length) {
 			Object.assign(elem.style, this.data.element.parseAnimate(elem.showAnimate))
+		}
+		if (elem.type === "container") {
+			this.showElementByIds(elem.children)
 		}
 	},
 	// 隐藏指定id列表的元素

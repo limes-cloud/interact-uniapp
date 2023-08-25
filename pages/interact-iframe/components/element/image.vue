@@ -1,6 +1,5 @@
 <template>
 	<Resource :id="element.resourceId"></Resource>
-	<!-- <image class="image" :src="element.src" @load="onload"></image> -->
 </template>
 
 <script>

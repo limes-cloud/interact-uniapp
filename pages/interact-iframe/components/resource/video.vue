@@ -10,7 +10,6 @@
 		@ended="onEnded"
 		@waiting="onWaiting"
 		@error="onError"
-		@progress="onProgress"
 		@timeupdate="onTimeupdate"
 	></video>
 </template>

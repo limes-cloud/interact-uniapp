@@ -33,9 +33,8 @@ export default {
 		return is
 	},
 	parseStyle: function(style) {
-		const toRpxAttr = ["height", "width", "left", "top", "right", "bottom", "paddingTop",
-			"paddingLeft",
-			"paddingRight", "paddingBottom", "lineHeight", "borderWidth", "borderRadius",
+		const toRpxAttr = ["height", "width", "left", "top", "right", "bottom", "padding", "paddingTop",
+			"paddingLeft", "paddingRight", "paddingBottom", "lineHeight", "borderWidth", "borderRadius",
 			"letterSpacing", "fontSize"
 		]
 
